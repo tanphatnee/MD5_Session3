@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/update" th:object="${user}" method="post">
+    <input type="text" name="id" th:field="*{id}" readonly>
+    <input type="text" th:field="*{fullName}">
+    <input type="text" th:field="*{username}">
+    <select  th:field="*{status}">
+        <option value="true">Active</option>
+        <option value="false">InActive</option>
+    </select>
+    <input type="submit" value="Update">
+</form>
+</body>
+</html>

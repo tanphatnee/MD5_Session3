@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/add" th:object="${user}" method="post">
+    <input type="text" name="FullName" placeholder="FullName" th:field="*{fullName}">
+    <input type="text" name="username"placeholder="UserName" th:field="*{username}">
+    <input type="password" name="password" PLACEHOLDER="PassWord" th:field="*{password}">
+    <select th:field="*{status}">
+        <option value="true">Active</option>
+        <option value="false">InActive</option>
+    </select>
+    <input type="submit" value="Add">
+</form>
+</body>
+</html>
